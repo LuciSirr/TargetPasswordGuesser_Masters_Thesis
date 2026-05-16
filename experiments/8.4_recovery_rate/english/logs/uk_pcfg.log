@@ -1,0 +1,16 @@
+profiles=200
+passwords=1948
+wordlist=pcfg_cracker/real_pcfg_uk.txt
+N=100 success=0.380000 cracked3=0.000000 avg_profile_recall=0.041611 password_recall=0.041581
+N=200 success=0.460000 cracked3=0.000000 avg_profile_recall=0.050347 password_recall=0.050308
+N=500 success=0.575000 cracked3=0.030000 avg_profile_recall=0.083569 password_recall=0.083676
+N=1000 success=0.675000 cracked3=0.075000 avg_profile_recall=0.111847 password_recall=0.111910
+N=2000 success=0.725000 cracked3=0.110000 avg_profile_recall=0.128486 password_recall=0.128337
+N=5000 success=0.875000 cracked3=0.235000 avg_profile_recall=0.178194 password_recall=0.177618
+N=10000 success=0.900000 cracked3=0.285000 avg_profile_recall=0.195194 password_recall=0.194559
+N=20000 success=0.960000 cracked3=0.405000 avg_profile_recall=0.234167 password_recall=0.233573
+N=50000 success=0.985000 cracked3=0.600000 avg_profile_recall=0.294222 password_recall=0.293121
+N=100000 success=1.000000 cracked3=0.725000 avg_profile_recall=0.347792 password_recall=0.346509
+N=200000 success=1.000000 cracked3=0.795000 avg_profile_recall=0.386972 password_recall=0.386037
+N=500000 success=1.000000 cracked3=0.870000 avg_profile_recall=0.432000 password_recall=0.431211
+N=1000000 success=1.000000 cracked3=0.910000 avg_profile_recall=0.468611 password_recall=0.468172

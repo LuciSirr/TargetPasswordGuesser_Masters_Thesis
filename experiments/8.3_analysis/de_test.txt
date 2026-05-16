@@ -1,0 +1,186 @@
+Dataset: train
+Profiles: 799
+Birth date missing: 0
+Age range: 3 - 97 (mean 43.72)
+People with children: 169 (total children 304)
+People with pets: 108 (total pets 108)
+People with previous passwords: 799 (total passwords 7850)
+Password length: 6 - 22 (mean 11.15)
+
+Top password shapes:
+  L6+D4: 543
+  L5+D4: 328
+  L4+D4: 326
+  L6+S1+D2: 302
+  L10+D2: 259
+  L6+S1+D4: 194
+  L7+D4: 187
+  L9+D2: 171
+  L4+S1+D4: 167
+  L11+D2: 160
+  L6+D3: 154
+  L9+S1+D2: 153
+  L9+D4: 153
+  L10+D4: 144
+  L8+D2: 144
+
+Top password masks:
+  U1+L5+D4: 520
+  U1+L4+D4: 315
+  U1+L3+D4: 291
+  U1+L5+S1+D2: 290
+  U1+L5+S1+D4: 182
+  U1+L6+D4: 164
+  U1+L3+S1+D4: 157
+  U1+L5+D3: 133
+  U1+L6+S1+D2: 111
+  U1+L5+U1+L3+D2: 108
+  U1+L5+D2: 95
+  U1+L3+U1+L3+D2: 89
+  U1+L2+D1+L2+S1+D2: 87
+  U1+L3+U1+L5+D2: 81
+  U1+L8+D4: 80
+
+Top years in passwords:
+  2020: 501
+  2022: 205
+  2023: 151
+  2021: 116
+  2019: 74
+  2018: 74
+  2017: 58
+  1970: 54
+  2012: 53
+  2016: 51
+  2024: 44
+  1974: 41
+  2015: 40
+  1973: 39
+  1957: 37
+
+Top numeric suffixes:
+  123: 816
+  2020: 468
+  14: 353
+  2022: 199
+  15: 196
+  17: 165
+  2023: 142
+  12: 120
+  2021: 110
+  10: 101
+  1: 79
+  21: 73
+  2018: 72
+  2019: 70
+  81: 57
+
+Top symbols in passwords:
+  !: 1736
+  _: 1419
+  .: 23
+  $: 2
+  &: 1
+  +: 1
+
+Top first names:
+  Jens: 80
+  Lukas: 79
+  Heike: 77
+  Annika: 73
+  Katrin: 69
+  Lena: 65
+  Jürgen: 53
+  Lina: 37
+  Tobias: 24
+  Bernd: 23
+  Gisela: 21
+  Ralf: 18
+  Brigitte: 18
+  Gerhard: 17
+  Lennart: 15
+
+Top last names:
+  Krause: 404
+  Kuhn: 354
+  Schulte: 22
+  Vogt: 15
+  Winter: 2
+  Busch: 1
+  Neumann: 1
+
+Top interests:
+  tatort: 374
+  nordic walking: 164
+  bundesliga: 146
+  rosamunde pilcher: 132
+  dark: 100
+  audiobooks: 97
+  krimis: 93
+  gartenarbeit: 75
+  paw patrol: 44
+  podcasts: 43
+  fifa: 38
+  reisen: 35
+  wandern: 30
+  stranger things: 30
+  schach: 28
+
+Top favorite hobbies:
+  tatort: 331
+  rosamunde pilcher: 132
+  dark: 95
+  paw patrol: 42
+  bibi und tina: 24
+  fifa: 19
+  germanys next topmodel: 18
+  minecraft: 15
+  gossip girl: 15
+  rosenzucht: 15
+  stranger things: 12
+  krimiromane: 9
+  bundesliga: 9
+  krimis lesen: 7
+  harry potter: 6
+
+Top pet names:
+  Minka: 56
+  Mimi: 11
+  Milo: 9
+  Momo: 6
+  Benny: 6
+  Bello: 4
+  Hasi: 4
+  Hoppel: 3
+  Bruno: 3
+  Rex: 1
+  Flauschi: 1
+  Bella: 1
+  Flocki: 1
+  Max: 1
+  Lotte: 1
+
+Top pet types:
+  cat: 81
+  dog: 17
+  other: 8
+  horse: 1
+  katze: 1
+
+Top regions:
+  nordrhein-westfalen: 240
+  niedersachsen: 98
+  hessen: 79
+  schleswig-holstein: 70
+  berlin: 50
+  sachsen: 50
+  rheinland-pfalz: 37
+  hamburg: 34
+  mecklenburg-vorpommern: 33
+  sachsen-anhalt: 32
+  brandenburg: 32
+  thuringen: 25
+  bremen: 11
+  saarland: 8
+
+

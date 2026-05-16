@@ -1,0 +1,188 @@
+Dataset: train
+Profiles: 799
+Birth date missing: 0
+Age range: 0 - 96 (mean 40.34)
+People with children: 0 (total children 0)
+People with pets: 491 (total pets 491)
+People with previous passwords: 799 (total passwords 7807)
+Password length: 6 - 26 (mean 11.92)
+
+Top password shapes:
+  L6+D4: 509
+  L5+D4: 304
+  L11+D2: 199
+  L7+D4: 193
+  L9+D2: 193
+  L8+D2: 178
+  L8+D4: 174
+  L7+S1+D2: 172
+  L10+D2: 168
+  L13+D2: 160
+  L12+D2: 158
+  L9+S1+D2: 147
+  L8+S1+D2: 123
+  L6+S1+D2: 121
+  L6+S1+D4: 111
+
+Top password masks:
+  U1+L5+D4: 506
+  U1+L4+D4: 304
+  U1+L6+D4: 143
+  U1+L7+D4: 132
+  U1+L5+S1+D2: 116
+  U1+L5+S1+D4: 107
+  U1+L8+D1+U1+L3: 104
+  U1+L12+D2: 103
+  U1+L8+S1+D2: 97
+  U1+L7+D2: 89
+  U1+L7+S1+D2: 83
+  U1+L6+S1+D2: 76
+  U1+L5+U1+L4+D2: 73
+  U1+L5+D1+U1+L3: 73
+  U1+L12+D3: 72
+
+Top years in passwords:
+  2020: 457
+  2022: 178
+  2024: 122
+  2019: 118
+  2023: 83
+  2021: 70
+  2017: 68
+  2018: 63
+  1972: 40
+  2001: 36
+  2010: 35
+  2014: 32
+  2015: 32
+  1974: 32
+  1979: 31
+
+Top numeric suffixes:
+  123: 804
+  2020: 450
+  17: 308
+  14: 292
+  15: 210
+  2022: 173
+  7: 144
+  1: 129
+  2024: 118
+  2019: 114
+  2023: 81
+  18: 76
+  2021: 69
+  2017: 66
+  88: 63
+
+Top symbols in passwords:
+  !: 1793
+  _: 910
+  &: 39
+  .: 9
+  $: 8
+  @: 1
+
+Top first names:
+  Fiona: 137
+  Callum: 101
+  Gareth: 97
+  Graham: 93
+  Imogen: 52
+  Margaret: 44
+  Harriet: 44
+  Poppy: 29
+  Geoffrey: 24
+  Gillian: 19
+  Archie: 16
+  Oscar: 15
+  Oliver: 15
+  Edith: 14
+  Malcolm: 12
+
+Top last names:
+  Hollingsworth: 346
+  Hollis: 100
+  Hollings: 71
+  Ashcroft: 55
+  Harrington: 48
+  Ashcombe: 20
+  Carmichael: 18
+  Caldwell: 17
+  Hollingworth: 15
+  Merriman: 12
+  Morrison: 9
+  Merrick: 8
+  Merriton: 7
+  Ashford: 6
+  Mansfield: 6
+
+Top interests:
+  gardening: 327
+  top gear: 94
+  classic cars: 73
+  coronation street: 73
+  travel: 56
+  great british bake off: 51
+  formula 1: 50
+  downton abbey: 49
+  british history: 43
+  travel photography: 43
+  baking: 41
+  fifa: 39
+  paw patrol: 37
+  walking holidays: 36
+  british baking: 35
+
+Top favorite hobbies:
+  gardening: 187
+  travel: 46
+  top gear: 43
+  classic cars: 39
+  great british bake off: 38
+  formula 1: 35
+  paw patrol: 35
+  love island: 30
+  peppa pig: 30
+  fifa: 28
+  coronation street: 26
+  travel photography: 22
+  bluey: 17
+  minecraft: 16
+  the crown: 16
+
+Top pet names:
+  Milo: 112
+  Misty: 101
+  Baxter: 100
+  Marmalade: 28
+  Mittens: 25
+  Tilly: 20
+  Biscuit: 18
+  Buster: 16
+  Willow: 15
+  Molly: 13
+  Whiskers: 13
+  Whisky: 4
+  Bracken: 4
+  Angus: 4
+  Skye: 4
+
+Top pet types:
+  cat: 303
+  dog: 188
+
+Top regions:
+  london: 128
+  south west: 107
+  north west: 98
+  south east: 83
+  scotland: 82
+  east: 75
+  west midlands: 63
+  east midlands: 51
+  yorkshire and the humbers: 44
+  north east: 33
+  northern ireland: 25
+  wales: 10
+

@@ -1,0 +1,190 @@
+Dataset: train
+Profiles: 799
+Birth date missing: 0
+Age range: 0 - 96 (mean 39.42)
+People with children: 0 (total children 0)
+People with pets: 404 (total pets 404)
+People with previous passwords: 799 (total passwords 7524)
+Password length: 6 - 20 (mean 10.56)
+
+Top password shapes:
+  L6+D4: 698
+  L7+D4: 344
+  L7+S1+D2: 274
+  L6+S1+D2: 237
+  L5+D4: 236
+  L8+D4: 225
+  L9+D2: 218
+  L8+D2: 198
+  L6+D3: 196
+  L6+D2: 157
+  L7+D3: 146
+  L7+D2: 136
+  L8+D3: 129
+  L6+D1+L4: 124
+  L9+D1: 119
+
+Top password masks:
+  U1+L5+D4: 678
+  U1+L6+D4: 329
+  U1+L6+S1+D2: 264
+  U1+L4+D4: 233
+  U1+L5+S1+D2: 226
+  U1+L7+D4: 209
+  U1+L5+D3: 189
+  U1+L5+D2: 151
+  U1+L6+D3: 140
+  U1+L7+D2: 137
+  U1+L5+S1+D4: 117
+  U1+L7+D3: 114
+  U1+L7+S1+D2: 111
+  U1+L6+D2: 107
+  U1+L4+D3: 106
+
+Top years in passwords:
+  2020: 414
+  2022: 215
+  2023: 178
+  2024: 139
+  2021: 134
+  2019: 58
+  2015: 53
+  1989: 49
+  2017: 48
+  2018: 42
+  2009: 40
+  1979: 37
+  2016: 35
+  1969: 33
+  2014: 33
+
+Top numeric suffixes:
+  123: 830
+  2020: 410
+  1: 364
+  2022: 213
+  21: 177
+  2023: 176
+  22: 143
+  2024: 139
+  2021: 133
+  7: 116
+  88: 110
+  99: 73
+  4: 66
+  19: 64
+  2019: 58
+
+Top symbols in passwords:
+  !: 1359
+  _: 870
+  &: 40
+  .: 8
+  -: 5
+  #: 2
+  $: 1
+
+Top first names:
+  Imogen: 113
+  Callum: 112
+  Gareth: 100
+  Fiona: 87
+  Graham: 57
+  Maisie: 48
+  Margaret: 42
+  Marion: 38
+  Gillian: 36
+  Malcolm: 34
+  Finley: 27
+  Harriet: 14
+  Albie: 13
+  Marjorie: 8
+  Geoffrey: 7
+
+Top last names:
+  Hollingsworth: 193
+  Hollis: 132
+  Hollings: 73
+  Hollingworth: 35
+  Ashcroft: 33
+  Fenwick: 29
+  Ashcombe: 23
+  Merrick: 22
+  Carmichael: 22
+  Whittaker: 21
+  Merriton: 15
+  Hatherleigh: 14
+  Radcliffe: 13
+  Pritchard: 12
+  Penrose: 11
+
+Top interests:
+  gardening: 389
+  reading: 314
+  travel: 221
+  walking: 200
+  cycling: 176
+  drawing: 128
+  football: 120
+  baking: 117
+  hiking: 62
+  crosswords: 60
+  gaming: 59
+  travelling: 57
+  knitting: 51
+  photography: 43
+  crossword: 39
+
+Top favorite hobbies:
+  gardening: 234
+  drawing: 103
+  travel: 90
+  cycling: 71
+  walking: 63
+  reading: 54
+  football: 48
+  hiking: 46
+  gaming: 25
+  lego: 13
+  driving: 9
+  yoga: 7
+  travelling: 6
+  baking: 6
+  fishing: 6
+
+Top pet names:
+  Milo: 114
+  Misty: 98
+  Baxter: 68
+  Mittens: 42
+  Willow: 15
+  Tilly: 15
+  Whiskers: 14
+  Buster: 9
+  Molly: 8
+  Bracken: 4
+  Bruno: 3
+  Bunny: 2
+  Marmalade: 2
+  Biscuit: 2
+  Bramble: 1
+
+Top pet types:
+  cat: 289
+  dog: 112
+  other: 3
+
+Top regions:
+  london: 113
+  south east: 106
+  north west: 96
+  south west: 83
+  west midlands: 82
+  scotland: 71
+  east: 65
+  east midlands: 60
+  yorkshire and the humbers: 54
+  wales: 43
+  northern ireland: 16
+  north east: 10
+

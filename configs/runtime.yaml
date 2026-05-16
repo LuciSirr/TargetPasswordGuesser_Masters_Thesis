@@ -1,0 +1,24 @@
+model_training:
+  max_password_length: 25
+  embedding_fallback_threshold: 0.2
+
+generation:
+  mode: deterministic
+  unique: true
+  seed: null
+
+token_enhancement:
+  dbpedia:
+    graph_depth: 1
+    graph_width: 5
+    threshold_dbp: 0.3
+    category_weight: 0.7
+    type_weight: 0.3
+    request_timeout: 30
+    request_delay: 0.1
+
+  embeddings:
+    threshold_w2v: 0.4
+    threshold_fasttext: 0.35
+
+  max_expansion: 5

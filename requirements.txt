@@ -1,0 +1,7 @@
+# Dependencies required by the main scripts in scripts/
+numpy
+PyYAML
+requests
+nicknames
+wikipedia2vec
+fasttext-wheel

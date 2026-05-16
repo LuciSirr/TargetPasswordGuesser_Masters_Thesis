@@ -1,0 +1,189 @@
+Dataset: train
+Profiles: 799
+Birth date missing: 0
+Age range: 0 - 89 (mean 39.27)
+People with children: 109 (total children 185)
+People with pets: 178 (total pets 178)
+People with previous passwords: 799 (total passwords 7772)
+Password length: 5 - 20 (mean 9.88)
+
+Top password shapes:
+  L5+D4: 843
+  L6+D4: 680
+  L7+D4: 433
+  L6+D2: 329
+  L6+D3: 322
+  L7+D2: 289
+  L4+D4: 273
+  L8+D4: 259
+  L5+D3: 232
+  L8+D2: 225
+  L7+D3: 195
+  L8+D3: 192
+  L10+D2: 168
+  L9+D4: 165
+  L9+D2: 163
+
+Top password masks:
+  U1+L4+D4: 765
+  U1+L5+D4: 581
+  U1+L6+D4: 352
+  U1+L5+D2: 288
+  U1+L5+D3: 264
+  U1+L3+D4: 243
+  U1+L6+D2: 242
+  U1+L7+D4: 197
+  U1+L4+D3: 191
+  U1+L7+D2: 172
+  U1+L4+D2: 139
+  U1+L8+D4: 127
+  U1+L6+D3: 120
+  U1+L7+D3: 119
+  U1+L3+D3: 112
+
+Top years in passwords:
+  2020: 523
+  2022: 384
+  2024: 301
+  2023: 294
+  2021: 224
+  2019: 56
+  2009: 46
+  2008: 45
+  2000: 44
+  2018: 43
+  2017: 41
+  2016: 37
+  1972: 35
+  1999: 34
+  2012: 33
+
+Top numeric suffixes:
+  123: 1000
+  2020: 522
+  2022: 384
+  2024: 301
+  2023: 294
+  2021: 221
+  321: 134
+  1: 126
+  77: 106
+  59: 94
+  79: 80
+  11: 73
+  21: 71
+  22: 68
+  1234: 56
+
+Top symbols in passwords:
+  !: 828
+  _: 430
+  .: 26
+  $: 6
+  @: 2
+
+Top first names:
+  Radek: 233
+  Ivana: 79
+  Iveta: 74
+  Tereza: 73
+  Vladimír: 69
+  Matěj: 60
+  Barbora: 40
+  Eliška: 27
+  Jarmila: 22
+  Radomír: 21
+  Šimon: 17
+  Radka: 13
+  Matyáš: 12
+  Libuše: 12
+  Božena: 10
+
+Top last names:
+  Veselý: 241
+  Veselá: 176
+  Vránová: 73
+  Šebesta: 60
+  Konečný: 56
+  Šebestová: 45
+  Kubeš: 18
+  Veselková: 13
+  Křivánek: 12
+  Konečná: 11
+  Kubešová: 10
+  Krejzová: 9
+  Křivánková: 8
+  Šimková: 7
+  Krejčí: 7
+
+Top interests:
+  nakupování: 241
+  malování: 186
+  čtení: 157
+  cestování: 157
+  auta: 140
+  křížovky: 129
+  procházky: 128
+  turistika: 117
+  fotbal: 116
+  seriály: 108
+  hudba: 80
+  vaření: 71
+  zahrada: 66
+  televize: 64
+  cyklistika: 40
+
+Top favorite hobbies:
+  malování: 135
+  cestování: 125
+  fotbal: 75
+  auta: 68
+  nakupování: 66
+  čtení: 61
+  turistika: 60
+  křížovky: 43
+  procházky: 34
+  televize: 20
+  seriály: 15
+  cyklistika: 9
+  knihy: 9
+  zahrada: 9
+  tanec: 7
+
+Top pet names:
+  Micka: 78
+  Beny: 23
+  Ben: 21
+  Míca: 17
+  Rex: 17
+  Bertík: 11
+  Bára: 4
+  Max: 2
+  Králík: 1
+  Beník: 1
+  Králíček: 1
+  Benny: 1
+  Křeček: 1
+
+Top pet types:
+  cat: 95
+  dog: 79
+  other: 3
+  pes: 1
+
+Top regions:
+  prague: 140
+  central bohemia: 95
+  moravian-silesian region: 87
+  south moravian region: 69
+  usti nad labem region: 67
+  vysocina region: 61
+  hradec kralove region: 47
+  plzen region: 44
+  olomouc region: 43
+  liberec region: 40
+  south bohemia: 39
+  pardubice region: 26
+  zlin region: 25
+  karlovy vary region: 16
+

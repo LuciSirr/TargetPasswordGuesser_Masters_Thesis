@@ -1,0 +1,197 @@
+Dataset: train
+Profiles: 799
+Birth date missing: 0
+Age range: 2 - 100 (mean 46.73)
+People with children: 166 (total children 295)
+People with pets: 102 (total pets 102)
+People with previous passwords: 799 (total passwords 7902)
+Password length: 5 - 20 (mean 10.57)
+
+Top password shapes:
+  L6+D4: 609
+  L5+D4: 389
+  L7+D4: 365
+  L6+S1+D2: 305
+  L4+D4: 263
+  L6+D3: 257
+  L9+D2: 181
+  L9+D4: 181
+  L12+D2: 171
+  L6+S1+D4: 170
+  L8+D4: 159
+  L9+D3: 143
+  L3+S1+D4: 143
+  L6+D2: 140
+  L7+S1+D2: 128
+
+Top password masks:
+  U1+L5+D4: 601
+  U1+L4+D4: 387
+  U1+L6+D4: 352
+  U1+L5+S1+D2: 305
+  U1+L3+D4: 262
+  U1+L5+D3: 256
+  U1+L5+S1+D4: 168
+  U1+L8+D4: 165
+  U1+L11+D2: 158
+  U1+L5+D2: 139
+  U1+L8+D3: 137
+  U1+L7+D4: 136
+  U3+S1+D4: 131
+  U1+L8+D2: 130
+  U1+L6+S1+D2: 125
+
+Top years in passwords:
+  2020: 436
+  2022: 341
+  2023: 312
+  2024: 198
+  2021: 109
+  2019: 62
+  1979: 59
+  2000: 53
+  1978: 52
+  1948: 48
+  2010: 44
+  2018: 44
+  1969: 41
+  2016: 34
+  2009: 33
+
+Top numeric suffixes:
+  123: 857
+  2020: 405
+  2022: 329
+  2023: 289
+  1: 225
+  2024: 193
+  07: 136
+  21: 112
+  2021: 104
+  22: 101
+  253: 91
+  77: 87
+  4: 80
+  3000: 77
+  7: 76
+
+Top symbols in passwords:
+  !: 1514
+  _: 1175
+  .: 29
+  @: 11
+  #: 10
+  &: 8
+  -: 6
+  $: 4
+  +: 4
+
+Top first names:
+  Annika: 80
+  Lennart: 75
+  Tobias: 43
+  Heike: 42
+  Jörg: 40
+  Katrin: 36
+  Jens: 36
+  Heinrich: 31
+  Jürgen: 30
+  Heinz: 29
+  Gisela: 27
+  Gertrud: 19
+  Lina: 18
+  Lennard: 18
+  Lukas: 17
+
+Top last names:
+  Krause: 137
+  Kreutzmann: 116
+  Kleinschmidt: 109
+  Kronenberg: 71
+  Kraus: 34
+  Schreiner: 31
+  Bergmann: 31
+  Krahl: 26
+  Kreutzer: 24
+  Schröder: 21
+  Vogelsang: 20
+  Schwanitz: 20
+  Kronberger: 13
+  Kretschmer: 12
+  Krausmann: 10
+
+Top interests:
+  reisen: 442
+  lesen: 243
+  wandern: 189
+  podcasts: 139
+  autos: 115
+  audiobücher: 108
+  musik: 104
+  audiobooks: 93
+  gartenarbeit: 81
+  spazieren: 63
+  fotografie: 54
+  malen: 43
+  fussball: 36
+  gaming: 34
+  fernsehen: 31
+
+Top favorite hobbies:
+  reisen: 227
+  wandern: 141
+  lesen: 140
+  spazieren: 26
+  malen: 26
+  fussball: 24
+  autos: 24
+  gartenarbeit: 22
+  podcasts: 20
+  gaming: 17
+  audiobücher: 14
+  bauklötze: 13
+  camping: 11
+  zeichnen: 10
+  audiobooks: 10
+
+Top pet names:
+  Minka: 24
+  Bruno: 24
+  Mimi: 17
+  Hoppel: 9
+  Mila: 6
+  Max: 6
+  Momo: 3
+  Fritz: 3
+  Hasi: 3
+  Hansi: 1
+  Milo: 1
+  Maxi: 1
+  Balu: 1
+  Bella: 1
+  Lotte: 1
+
+Top pet types:
+  dog: 34
+  cat: 28
+  katze: 23
+  other: 13
+  hund: 3
+  bird: 1
+
+Top regions:
+  nordrhein-westfalen: 258
+  niedersachsen: 107
+  hessen: 92
+  rheinland-pfalz: 66
+  sachsen: 58
+  berlin: 55
+  hamburg: 30
+  schleswig-holstein: 28
+  thuringen: 27
+  sachsen-anhalt: 25
+  mecklenburg-vorpommern: 23
+  brandenburg: 17
+  bremen: 7
+  saarland: 6
+

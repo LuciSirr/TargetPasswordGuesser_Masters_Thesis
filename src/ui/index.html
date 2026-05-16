@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profile and Config Builder</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <section class="hero">
+      <h1>Profile and Config Builder</h1>
+      <p>Create a profile `.json` file and edit the app configuration.</p>
+      <div class="toolbar">
+        <button class="secondary" type="button" onclick="loadDefaults()">Reset To Defaults</button>
+        <button class="ghost" type="button" onclick="loadFromDisk()">Load Existing Files</button>
+      </div>
+      <nav class="page-menu">
+        <button id="menu-profile" class="menu-button active" type="button" onclick="showPage('profile')">Profile</button>
+        <button id="menu-runtime" class="menu-button" type="button" onclick="showPage('runtime')">Runtime Config</button>
+        <button id="menu-resources" class="menu-button" type="button" onclick="showPage('resources')">Resources Config</button>
+      </nav>
+      <div id="status" class="status">Ready.</div>
+    </section>
+
+    <div class="page-stack">
+        <section id="page-profile" class="page-card active">
+          <div class="profile-page-grid">
+            <section class="card profile-form-card">
+              <div class="card-header">
+                <h2>Profile JSON</h2>
+                <p>Single-value fields are stored as strings. Interests and previous passwords are stored as arrays, and children or pets can be added dynamically.</p>
+              </div>
+              <div class="card-body">
+                <div class="path-box">
+                  <div>
+                    <label for="profilePath">Profile output path</label>
+                    <input id="profilePath" value="profiles/new_profile.json" />
+                  </div>
+                </div>
+                <div class="section-actions">
+                  <button class="primary" type="button" onclick="saveProfile()">Save</button>
+                </div>
+
+                <div class="section-title">Identity</div>
+                <div class="grid">
+                  <div><label for="birth_date">Birth Date</label><input id="birth_date" placeholder="YYYY-MM-DD" /></div>
+                  <div><label for="age">Age</label><input id="age" type="number" min="0" step="1" /></div>
+                  <div><label for="self_first_name">Self First Name</label><input id="self_first_name" /></div>
+                  <div><label for="self_last_name">Self Last Name</label><input id="self_last_name" /></div>
+                  <div><label for="partner_first_name">Partner First Name</label><input id="partner_first_name" /></div>
+                  <div><label for="partner_last_name">Partner Last Name</label><input id="partner_last_name" /></div>
+                  <div><label for="nationality">Nationality</label><input id="nationality" /></div>
+                </div>
+
+                <div class="section-title">Context</div>
+                <div class="grid">
+                  <div><label for="region">Region</label><input id="region" /></div>
+                  <div><label for="company">Company</label><input id="company" /></div>
+                  <div><label for="car_brand">Car Brand</label><input id="car_brand" /></div>
+                </div>
+
+                <div class="section-title">Lists</div>
+                <div class="grid">
+                  <div>
+                    <label for="interests">Interests</label>
+                    <textarea id="interests" placeholder="One interest per line"></textarea>
+                  </div>
+                  <div>
+                    <label for="previous_passwords">Previous Passwords</label>
+                    <textarea id="previous_passwords" placeholder="One password per line"></textarea>
+                  </div>
+                </div>
+
+                <div class="section-title">Children</div>
+                <div id="childrenList" class="repeat-list"></div>
+                <div class="compact-note">Each child is saved as an object with `first_name` and `last_name`.</div>
+                <div class="toolbar">
+                  <button class="secondary" type="button" onclick="addChild()">Add Child</button>
+                </div>
+
+                <div class="section-title">Pets</div>
+                <div id="petsList" class="repeat-list"></div>
+                <div class="compact-note">Each pet is saved as an object with `pet_type` and `pet_name`.</div>
+                <div class="toolbar">
+                  <button class="secondary" type="button" onclick="addPet()">Add Pet</button>
+                </div>
+              </div>
+            </section>
+
+            <section class="card profile-preview-card">
+              <div class="card-header">
+                <h2>Profile Preview</h2>
+                <p>Live JSON preview.</p>
+              </div>
+              <div class="card-body">
+                <pre id="profilePreview"></pre>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section id="page-runtime" class="page-card">
+          <div class="config-page-grid">
+            <section class="card config-form-card">
+              <div class="card-header">
+                <h2>Runtime Config YAML</h2>
+                <p>This maps directly to `configs/runtime.yaml` and controls generation, training, and token expansion settings.</p>
+              </div>
+              <div class="card-body">
+                <div class="path-box">
+                  <div>
+                    <label for="runtimePath">Runtime config output path</label>
+                    <input id="runtimePath" value="configs/runtime.generated.yaml" />
+                  </div>
+                </div>
+                <div class="section-actions">
+                  <button class="primary" type="button" onclick="saveRuntime()">Save</button>
+                </div>
+
+                <div class="section-title">Model Training</div>
+                <div class="grid">
+                  <div><label for="max_password_length">Max Password Length</label><input id="max_password_length" type="number" min="1" step="1" /></div>
+                  <div><label for="embedding_fallback_threshold">Embedding Fallback Threshold</label><input id="embedding_fallback_threshold" type="number" step="0.01" /></div>
+                </div>
+
+                <div class="section-title">Generation</div>
+                <div class="grid">
+                  <div>
+                    <label for="generation_mode">Mode</label>
+                    <select id="generation_mode">
+                      <option value="deterministic">deterministic</option>
+                      <option value="random">random</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="generation_unique">Unique Passwords</label>
+                    <select id="generation_unique">
+                      <option value="true">true</option>
+                      <option value="false">false</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="section-title">Token Enhancement</div>
+                <div class="grid-3">
+                  <div><label for="graph_depth">Graph Depth</label><input id="graph_depth" type="number" min="0" step="1" /></div>
+                  <div><label for="graph_width">Graph Width</label><input id="graph_width" type="number" min="0" step="1" /></div>
+                  <div><label for="request_timeout">Request Timeout</label><input id="request_timeout" type="number" min="0" step="1" /></div>
+                  <div><label for="request_delay">Request Delay</label><input id="request_delay" type="number" step="0.01" /></div>
+                  <div><label for="threshold_dbp">DBpedia Threshold</label><input id="threshold_dbp" type="number" step="0.01" /></div>
+                  <div><label for="category_weight">Category Weight</label><input id="category_weight" type="number" step="0.01" /></div>
+                  <div><label for="type_weight">Type Weight</label><input id="type_weight" type="number" step="0.01" /></div>
+                  <div><label for="threshold_w2v">W2V Threshold</label><input id="threshold_w2v" type="number" step="0.01" /></div>
+                  <div><label for="threshold_fasttext">FastText Threshold</label><input id="threshold_fasttext" type="number" step="0.01" /></div>
+                  <div><label for="max_expansion">Max Expansion</label><input id="max_expansion" type="number" min="0" step="1" /></div>
+                </div>
+              </div>
+            </section>
+
+            <section class="card config-preview-card">
+              <div class="card-header">
+                <h2>Runtime Preview</h2>
+                <p>Live YAML preview.</p>
+              </div>
+              <div class="card-body">
+                <pre id="runtimePreview"></pre>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section id="page-resources" class="page-card">
+          <div class="config-page-grid">
+            <section class="card config-form-card">
+              <div class="card-header">
+                <h2>Resources Config YAML</h2>
+                <p>Optional model-path and language resource editor for `configs/resources.yaml`.</p>
+              </div>
+              <div class="card-body">
+                <div class="path-box">
+                  <div>
+                    <label for="resourcesPath">Resources config output path</label>
+                    <input id="resourcesPath" value="configs/resources.generated.yaml" />
+                  </div>
+                </div>
+                <div class="section-actions">
+                  <button class="primary" type="button" onclick="saveResources()">Save</button>
+                </div>
+
+                <div class="grid">
+                  <div class="full-width">
+                    <label for="dbpedia_sparql_url">DBpedia SPARQL URL</label>
+                    <input id="dbpedia_sparql_url" />
+                  </div>
+                </div>
+
+                <div class="section-title">English</div>
+                <div class="grid">
+                  <div><label for="en_w2v_model">W2V Model</label><input id="en_w2v_model" /></div>
+                  <div><label for="en_fasttext_model">FastText Model</label><input id="en_fasttext_model" /></div>
+                </div>
+
+                <div class="section-title">Czech</div>
+                <div class="grid">
+                  <div><label for="cz_w2v_model">W2V Model</label><input id="cz_w2v_model" /></div>
+                  <div><label for="cz_fasttext_model">FastText Model</label><input id="cz_fasttext_model" /></div>
+                  <div><label for="cz_name_diminutives">Name Diminutives</label><input id="cz_name_diminutives" /></div>
+                </div>
+
+                <div class="section-title">German</div>
+                <div class="grid">
+                  <div><label for="de_w2v_model">W2V Model</label><input id="de_w2v_model" /></div>
+                  <div><label for="de_fasttext_model">FastText Model</label><input id="de_fasttext_model" /></div>
+                </div>
+              </div>
+            </section>
+
+            <section class="card config-preview-card">
+              <div class="card-header">
+                <h2>Resources Preview</h2>
+                <p>Live YAML preview.</p>
+              </div>
+              <div class="card-body">
+                <pre id="resourcesPreview"></pre>
+              </div>
+            </section>
+          </div>
+        </section>
+    </div>
+
+  </div>
+
+  <template id="childTemplate">
+    <div class="repeat-item">
+      <div class="repeat-item-header">
+        <strong>Child</strong>
+        <button class="danger" type="button" data-remove>Remove</button>
+      </div>
+      <div class="grid">
+        <div><label>First Name</label><input data-field="first_name" /></div>
+        <div><label>Last Name</label><input data-field="last_name" /></div>
+      </div>
+    </div>
+  </template>
+
+  <template id="petTemplate">
+    <div class="repeat-item">
+      <div class="repeat-item-header">
+        <strong>Pet</strong>
+        <button class="danger" type="button" data-remove>Remove</button>
+      </div>
+      <div class="grid">
+        <div><label>Pet Type</label><input data-field="pet_type" /></div>
+        <div><label>Pet Name</label><input data-field="pet_name" /></div>
+      </div>
+    </div>
+  </template>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
