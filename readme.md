@@ -1,3 +1,5 @@
+!! Due to Ethical concerns this repository does not contain the synthetic user datasets and structural models !!
+
 # Profile-Based Password Generator
 
 This master thesis implements a tool for generating password candidates from a target
