@@ -6,6 +6,9 @@ People with children: 166 (total children 295)
 People with pets: 102 (total pets 102)
 People with previous passwords: 799 (total passwords 7902)
 Password length: 5 - 20 (mean 10.57)
+Contains at least one digit: 7099/7902 (89.84%)
+Contains at least one symbol: 2750/7902 (34.80%)
+All letters lowercase: 4/7902 (0.05%)
 
 Top password shapes:
   L6+D4: 609
@@ -194,4 +197,3 @@ Top regions:
   brandenburg: 17
   bremen: 7
   saarland: 6
-

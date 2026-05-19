@@ -1,1 +1,1 @@
-store embedding models here
+Store embedding models here

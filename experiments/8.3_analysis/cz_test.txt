@@ -1,180 +1,179 @@
-Dataset: train
-Profiles: 799
+Dataset: test
+Profiles: 200
 Birth date missing: 0
-Age range: 0 - 87 (mean 42.37)
-People with children: 151 (total children 242)
-People with pets: 364 (total pets 364)
-People with previous passwords: 799 (total passwords 7861)
-Password length: 5 - 22 (mean 10.95)
+Age range: 6 - 85 (mean 42.81)
+People with children: 42 (total children 61)
+People with pets: 94 (total pets 94)
+People with previous passwords: 200 (total passwords 1973)
+Password length: 5 - 22 (mean 10.87)
+Contains at least one digit: 1661/1973 (84.19%)
+Contains at least one symbol: 583/1973 (29.55%)
+All letters lowercase: 560/1973 (28.38%)
 
 Top password shapes:
-  L5+D4: 701
-  L6+D4: 482
-  L9+D2: 329
-  L8+D4: 274
-  L9+D4: 251
-  L10+D2: 246
-  L7+D4: 213
-  L6+S1+D2: 203
-  L11: 203
-  L6+D3: 201
-  L9+S1+D2: 200
-  L9+D3: 181
-  L4+D4: 171
-  L5+S1+D2: 161
-  L10+D4: 159
+  L5+D4: 188
+  L6+D4: 123
+  L9+D2: 85
+  L8+D4: 70
+  L6+D3: 58
+  L10+D2: 57
+  L4+D4: 55
+  L9+S1+D2: 54
+  L7+D4: 51
+  L9+D4: 48
+  L5+S1+D2: 45
+  L9+D3: 44
+  L11: 42
+  L10+D4: 41
+  L6+S1+D2: 40
 
 Top password masks:
-  U1+L4+D4: 632
-  U1+L5+D4: 373
-  U1+L8+D2: 164
-  U1+L5+S1+D2: 150
-  U1+L5+D3: 150
-  U1+L4+S1+D2: 144
-  L8+D4: 139
-  L9+D4: 138
-  U1+L6+D4: 123
-  U1+L7+D4: 118
-  U1+L4+D3: 117
-  U1+L8+D3: 114
-  L8+S1+D2: 104
-  U1+L8+S1+D2: 102
-  L6+D4: 96
+  U1+L4+D4: 169
+  U1+L5+D4: 88
+  L8+D4: 48
+  U1+L4+S1+D2: 44
+  U1+L8+D2: 41
+  U1+L5+D3: 41
+  L6+D4: 33
+  U1+L5+S1+D2: 32
+  U1+L3+D4: 31
+  L9+D4: 29
+  U1+L8+D3: 28
+  L10+S1+D2: 26
+  L9+S1+D2: 26
+  U1+L8+S1+D2: 26
+  U1+L6+D4: 26
 
 Top years in passwords:
-  2020: 497
-  2023: 310
-  2022: 287
-  2024: 135
-  2021: 109
-  2015: 70
-  2009: 61
-  2019: 60
-  2011: 47
-  2018: 40
-  1960: 39
-  2017: 34
-  2002: 33
-  1997: 30
-  1955: 30
+  2020: 126
+  2023: 94
+  2022: 64
+  2024: 37
+  2021: 26
+  2011: 18
+  2009: 17
+  2019: 17
+  2018: 14
+  1971: 10
+  1978: 10
+  2015: 10
+  1960: 9
+  1977: 9
+  2002: 9
 
 Top numeric suffixes:
-  123: 813
-  2020: 487
-  2023: 304
-  2022: 281
-  14: 238
-  15: 182
-  17: 144
-  12: 139
-  2024: 134
-  1: 120
-  2021: 108
-  59: 79
-  10: 76
-  2015: 70
-  79: 70
+  123: 195
+  2020: 123
+  2023: 91
+  2022: 63
+  14: 59
+  17: 47
+  15: 41
+  12: 37
+  2024: 36
+  77: 26
+  2021: 25
+  6: 23
+  59: 22
+  1: 22
+  11: 20
 
 Top symbols in passwords:
-  !: 1171
-  _: 1050
-  .: 114
-  $: 10
-  +: 2
+  !: 300
+  _: 257
+  .: 33
+  $: 1
 
 Top first names:
-  Radek: 150
-  Matěj: 101
-  Jitka: 91
-  Tereza: 87
-  Vladimír: 69
-  Iveta: 67
-  Jarmila: 47
-  Božena: 39
-  Eliška: 26
-  Barbora: 23
-  Petra: 18
-  Ivana: 16
-  Jaroslav: 13
-  Jakub: 10
-  Patrik: 9
+  Radek: 52
+  Matěj: 24
+  Tereza: 23
+  Jitka: 21
+  Iveta: 17
+  Jarmila: 12
+  Božena: 10
+  Vladimír: 10
+  Jaroslav: 6
+  Ivana: 6
+  Eliška: 4
+  Petra: 4
+  Jakub: 3
+  Petr: 2
+  Lucie: 2
 
 Top last names:
-  Kohoutová: 357
-  Kohout: 276
-  Jurčová: 72
-  Šimáček: 47
-  Jurčo: 40
-  Krásová: 3
-  Kohoutek: 3
-  Jurčíková: 1
+  Kohoutová: 86
+  Kohout: 70
+  Šimáček: 22
+  Jurčová: 11
+  Jurčo: 7
+  Krásová: 2
+  Burešová: 1
+  Kohoutek: 1
 
 Top interests:
-  fotbal: 134
-  české filmy: 121
-  cestování: 106
-  turistika: 94
-  křížovky: 84
-  netflix: 76
-  malování: 67
-  fifa: 57
-  ordinace v růžové zahradě: 56
-  krimi romány: 43
-  pečení: 37
-  krimi filmy: 37
-  stranger things: 33
-  krteček: 32
-  zahradničení: 31
+  fotbal: 41
+  české filmy: 33
+  cestování: 31
+  malování: 25
+  křížovky: 23
+  turistika: 23
+  netflix: 22
+  fifa: 16
+  ordinace v růžové zahradě: 15
+  pečení: 11
+  zahradničení: 10
+  krimi romány: 8
+  krizovky: 8
+  auta: 8
+  stranger things: 7
 
 Top favorite hobbies:
-  české filmy: 76
-  cestování: 73
-  fotbal: 70
-  ordinace v růžové zahradě: 53
-  fifa: 43
-  krimi romány: 36
-  netflix: 35
-  krteček: 32
-  turistika: 29
-  stranger things: 24
-  miraculous ladybug: 20
-  kriminálky: 16
-  český film: 15
-  hbo max: 15
-  krimi filmy: 14
+  fotbal: 25
+  cestování: 23
+  české filmy: 18
+  ordinace v růžové zahradě: 15
+  fifa: 15
+  krimi romány: 7
+  netflix: 7
+  krteček: 6
+  miraculous ladybug: 6
+  stranger things: 5
+  harry potter: 5
+  ceske filmy: 5
+  český film: 4
+  české detektivky: 4
+  turistika: 4
 
 Top pet names:
-  Micka: 197
-  Rex: 72
-  Ben: 25
-  Beny: 24
-  Míca: 15
-  Bertík: 14
-  Bady: 6
-  Baryk: 4
-  Miki: 2
-  Bertik: 2
+  Micka: 44
+  Rex: 25
+  Beny: 7
+  Míca: 5
+  Ben: 4
+  Bady: 3
+  Bertík: 3
+  Králíček: 1
+  Bára: 1
   Beník: 1
-  Rexík: 1
-  Rocky: 1
 
 Top pet types:
-  cat: 214
-  dog: 150
+  cat: 49
+  dog: 44
+  other: 1
 
 Top regions:
-  south moravian region: 125
-  central bohemia: 101
-  prague: 91
-  usti nad labem region: 90
-  zlin region: 71
-  moravian-silesian region: 59
-  hradec kralove region: 56
-  south bohemia: 43
-  olomouc region: 39
-  vysocina region: 36
-  liberec region: 30
-  plzen region: 28
-  pardubice region: 18
-  karlovy vary region: 12
-
+  south moravian region: 30
+  central bohemia: 29
+  prague: 24
+  zlin region: 19
+  usti nad labem region: 19
+  south bohemia: 17
+  hradec kralove region: 14
+  moravian-silesian region: 11
+  liberec region: 10
+  vysocina region: 9
+  plzen region: 7
+  olomouc region: 6
+  karlovy vary region: 3
+  pardubice region: 2

@@ -10,6 +10,7 @@ AUTO_RUN_LOG = "__auto_run_log__"
 
 
 def add_run_log_argument(parser):
+    """Add a --run_log argument to the given argparse parser."""
     parser.add_argument(
         "--run_log",
         nargs="?",
@@ -25,10 +26,12 @@ def add_run_log_argument(parser):
 
 
 def utc_timestamp() -> str:
+    """Get the current UTC timestamp as an ISO 8601 string without microseconds."""
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
 
 def resolve_run_log_path(log_argument, tool_name: str):
+    """Determine the run log path based on the log_argument value."""
     if log_argument is None:
         return None
 
@@ -52,6 +55,7 @@ def write_run_log(
     additional_configs: dict | None = None,
     result: dict | None = None,
 ):
+    """Write a JSON run log with CLI arguments, runtime configuration, effective settings, and seed."""
     if path is None:
         return None
 
@@ -85,6 +89,7 @@ def write_run_log(
 
 
 def _make_json_safe(value):
+    """Recursively convert non-JSON-serializable values to JSON-safe types."""
     if isinstance(value, Path):
         return str(value)
     if isinstance(value, dict):

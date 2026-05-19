@@ -65,10 +65,52 @@ def load_wordlist_prefix_hits(wordlist_path: Path, thresholds: list[int], true_p
     return hits_by_threshold
 
 
+def load_shared_wordlist_hit_positions(
+    wordlist_path: Path, max_threshold: int, target_passwords: set[str]
+) -> dict[str, int]:
+    """Load a shared wordlist once and remember the first unique guess rank for every target password."""
+    hit_positions: dict[str, int] = {}
+    seen_passwords: set[str] = set()
+    unique_count = 0
+
+    with wordlist_path.open("r", encoding="utf-8", errors="ignore") as handle:
+        for line in handle:
+            password = line.strip()
+            if not password or password in seen_passwords:
+                continue
+
+            seen_passwords.add(password)
+            unique_count += 1
+
+            if password in target_passwords and password not in hit_positions:
+                hit_positions[password] = unique_count
+                if len(hit_positions) == len(target_passwords):
+                    break
+
+            if unique_count >= max_threshold:
+                break
+
+    return hit_positions
+
+
+def count_shared_wordlist_hits(
+    thresholds: list[int], true_passwords: set[str], hit_positions: dict[str, int]
+) -> dict[int, int]:
+    """Count true passwords whose first unique guess rank is within each threshold."""
+    return {
+        threshold: sum(
+            1 for password in true_passwords if hit_positions.get(password, threshold + 1) <= threshold
+        )
+        for threshold in thresholds
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Measure success@N on the clone profiles.")
     parser.add_argument("--profiles-dir", default="data/uk/test")
-    parser.add_argument("--wordlists-dir", required=True)
+    wordlist_group = parser.add_mutually_exclusive_group(required=True)
+    wordlist_group.add_argument("--wordlists-dir")
+    wordlist_group.add_argument("--wordlist-file")
     parser.add_argument(
         "--iterations",
         help="Comma-separated guess cutoffs to evaluate, e.g. 100,1000,10000,100000,1000000",
@@ -79,11 +121,14 @@ def main() -> None:
     args = parser.parse_args()
 
     profiles_dir = Path(args.profiles_dir)
-    wordlists_dir = Path(args.wordlists_dir)
+    wordlists_dir = Path(args.wordlists_dir) if args.wordlists_dir else None
+    shared_wordlist_path = Path(args.wordlist_file) if args.wordlist_file else None
     if not profiles_dir.is_dir():
         raise FileNotFoundError(f"Profiles directory not found: {profiles_dir}")
-    if not wordlists_dir.is_dir():
+    if wordlists_dir is not None and not wordlists_dir.is_dir():
         raise FileNotFoundError(f"Wordlists directory not found: {wordlists_dir}")
+    if shared_wordlist_path is not None and not shared_wordlist_path.is_file():
+        raise FileNotFoundError(f"Wordlist file not found: {shared_wordlist_path}")
 
     if args.iterations:
         iterations = [int(value.strip()) for value in args.iterations.split(",") if value.strip()]
@@ -93,6 +138,7 @@ def main() -> None:
         iterations = DEFAULT_ITERATIONS
 
     profile_paths = sorted(profiles_dir.glob("*.json"))
+    profile_infos = []
     stats_by_iteration = {
         num_passwords: {
             "total_profiles": 0,
@@ -116,12 +162,28 @@ def main() -> None:
             print(f"[{index}] {profile_path.name}: skipped, no previous_passwords")
             continue
 
-        wordlist_path = find_matching_wordlist(wordlists_dir, clone_id)
-        if wordlist_path is None:
-            print(f"[{index}] {profile_path.name}: skipped, no matching wordlist file for id={clone_id}")
-            continue
+        profile_infos.append((index, profile_path, clone_id, true_passwords))
 
-        hits_by_iteration = load_wordlist_prefix_hits(wordlist_path, iterations, true_passwords)
+    shared_hit_positions = None
+    if shared_wordlist_path is not None:
+        all_true_passwords = set()
+        for _, _, _, true_passwords in profile_infos:
+            all_true_passwords.update(true_passwords)
+        shared_hit_positions = load_shared_wordlist_hit_positions(
+            shared_wordlist_path, max(iterations), all_true_passwords
+        )
+
+    for index, profile_path, clone_id, true_passwords in profile_infos:
+        if shared_wordlist_path is not None:
+            wordlist_path = shared_wordlist_path
+            hits_by_iteration = count_shared_wordlist_hits(iterations, true_passwords, shared_hit_positions or {})
+        else:
+            wordlist_path = find_matching_wordlist(wordlists_dir, clone_id)
+            if wordlist_path is None:
+                print(f"[{index}] {profile_path.name}: skipped, no matching wordlist file for id={clone_id}")
+                continue
+
+            hits_by_iteration = load_wordlist_prefix_hits(wordlist_path, iterations, true_passwords)
         profile_true_count = len(true_passwords)
 
         for num_passwords in iterations:

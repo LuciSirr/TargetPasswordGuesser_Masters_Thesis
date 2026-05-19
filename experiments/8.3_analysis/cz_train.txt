@@ -6,6 +6,9 @@ People with children: 109 (total children 185)
 People with pets: 178 (total pets 178)
 People with previous passwords: 799 (total passwords 7772)
 Password length: 5 - 20 (mean 9.88)
+Contains at least one digit: 6940/7772 (89.29%)
+Contains at least one symbol: 1287/7772 (16.56%)
+All letters lowercase: 1060/7772 (13.64%)
 
 Top password shapes:
   L5+D4: 843
@@ -186,4 +189,3 @@ Top regions:
   pardubice region: 26
   zlin region: 25
   karlovy vary region: 16
-
