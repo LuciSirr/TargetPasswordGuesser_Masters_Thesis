@@ -1,12 +1,11 @@
 dbpedia_sparql_url: https://dbpedia.org/sparql
 languages:
   en:
-    #w2v_model: models/embeddings/wiki2vec_500k.kv
     w2v_model: models/embeddings/enwiki_20180420_100d.pkl
     fasttext_model: models/embeddings/cc.en.300.bin
 
   cz:
-    #w2v_model: models/embeddings/wiki2vec_cz.kv
+    #w2v_model:
     fasttext_model: models/embeddings/cc.cs.300.bin
     name_diminutives: resources/czech_name_diminutives.json
 
